@@ -161,133 +161,6 @@ footer {
     margin-top: auto;
 }
 
-/* Media Queries per Responsive Design */
-@media (max-width: 968px) {
-    .hero-section {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-    }
-
-    .doctor-circle {
-        width: 300px;
-        height: 300px;
-    }
-
-    .text-content {
-        align-items: center;
-    }
-
-    .scroll-icon {
-        align-self: center;
-    }
-
-    .form-section {
-        padding: 2rem;
-        margin: 2rem auto 4rem;
-    }
-
-    .form-container {
-        padding: 2rem;
-    }
-
-    .text-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .text-content h2 {
-        font-size: 1.8rem;
-    }
-
-    .logo {
-        height: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-content {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .doctor-circle {
-        width: 250px;
-        height: 250px;
-    }
-
-    .medical-icon {
-        width: 50px;
-        height: 50px;
-    }
-
-    .text-content h1 {
-        font-size: 2rem;
-    }
-
-    .text-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .logo {
-        height: 25px;
-    }
-
-    .form-section {
-        padding: 1rem;
-        margin: 1rem auto 3rem;
-    }
-
-    .form-container {
-        padding: 1.5rem;
-    }
-
-    .submit-button {
-        width: 100%;
-        min-width: unset;
-    }
-}
-
-/* Icona Scroll */
-.scroll-container {
-    text-align: center;
-}
-
-.scroll-icon {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    color: #8A0151;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-.scroll-icon i {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    animation: bounce 2s infinite;
-}
-
-.scroll-icon span {
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-.scroll-icon:hover {
-    transform: translateY(5px);
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
-
 /* Sezione Form */
 .form-section {
     padding: 4rem;
@@ -368,7 +241,177 @@ footer {
 .submit-button:hover {
     background-color: #EFAB00;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px #a07404(138, 1, 81, 0.3);
+    box-shadow: 0 5px 15px rgba(239, 171, 0, 0.3);
+}
+
+/* Media Queries per Responsive Design */
+@media (max-width: 968px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .doctor-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .text-content {
+        align-items: center;
+    }
+
+    .scroll-icon {
+        align-self: center;
+    }
+
+    .form-section {
+        padding: 2rem;
+        margin: 2rem auto 4rem;
+    }
+
+    .form-container {
+        padding: 2rem;
+    }
+
+    .text-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .text-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .logo {
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .doctor-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .medical-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .text-content h1 {
+        font-size: 2rem;
+    }
+
+    .text-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        height: 65px;
+    }
+
+    .form-section {
+        padding: 1rem;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .form-container {
+        padding: 1rem;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .form-container h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: #8A0151;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 0.7rem;
+        font-size: 1rem;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        box-sizing: border-box;
+    }
+
+    .form-group textarea {
+        min-height: 80px;
+    }
+
+    .submit-button {
+        width: calc(100% - 2rem);
+        margin: 1.5rem 1rem;
+        padding: 0.8rem;
+        font-size: 1rem;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+}
+
+/* Icona Scroll */
+.scroll-container {
+    text-align: center;
+}
+
+.scroll-icon {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    color: #8A0151;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.scroll-icon i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    animation: bounce 2s infinite;
+}
+
+.scroll-icon span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.scroll-icon:hover {
+    transform: translateY(5px);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
 /* Sezione Successo */
