@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segnalazione Eventi Avversi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Logo">
+            </div>
+            <div class="contact-button">
+                <a href="mailto:test@example.com">
+                    <i class="fas fa-envelope"></i> Contattaci
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            <div class="image-container">
+                <div class="doctor-circle">
+                    <img src="assets/doctor.jpg" alt="Dottoressa">
+                    <div class="medical-icon">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h1>Piattaforma di Segnalazione</h1>
+                    <h2>Trastuzumab deruxtecan</h2>
+                </div>
+                <div class="scroll-container">
+                    <a href="#form-section" class="scroll-icon">
+                        <i class="fas fa-chevron-down"></i>
+                        <span>Compila la segnalazione</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="form-section" class="form-section">
+            <div class="form-container">
+                <h2>Segnalazione dell'evento avverso</h2>
+                <form id="adverse-event-form" action="success.html">
+                    <div class="form-group">
+                        <label for="specialist">Specialista:</label>
+                        <select id="specialist" name="specialist" required>
+                            <option value="">Seleziona la tua specializzazione</option>
+                            <option value="oncologo">Oncologo</option>
+                            <option value="ematologo">Ematologo</option>
+                            <option value="pneumologo">Pneumologo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="treatment">Trattamento utilizzato:</label>
+                        <input type="text" id="treatment" name="treatment" required 
+                               placeholder="Es: Nome del farmaco, dosaggio, durata del trattamento">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adverse-event">Evento avverso:</label>
+                        <textarea id="adverse-event" name="adverse-event" rows="4" required
+                                placeholder="Descrivi dettagliatamente l'evento avverso osservato"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="severity">Gravità:</label>
+                        <select id="severity" name="severity" required>
+                            <option value="">Seleziona il livello di gravità dell'evento</option>
+                            <option value="lieve">Lieve</option>
+                            <option value="moderata">Moderata</option>
+                            <option value="grave">Grave</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="management">Gestione dell'evento:</label>
+                        <textarea id="management" name="management" rows="4" required
+                                placeholder="Descrivi come è stato gestito l'evento avverso e quali misure sono state adottate"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">Invia segnalazione</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Tutti i diritti riservati</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
